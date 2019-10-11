@@ -16,5 +16,17 @@ namespace RPGSystem
         {
             InitializeComponent();
         }
+
+        private void AddPlayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlayerStats playerStats = new PlayerStats();
+            flowLayoutPanel1.Controls.Add(playerStats);
+        }
+
+        private void DiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DiceTool diceTool = new DiceTool();
+            diceTool.Show();
+        }
     }
 }
