@@ -33,13 +33,13 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPlayersItems = new TextBoxBorderColor.MyTextBox();
-            this.txtPlayersSkills = new TextBoxBorderColor.MyTextBox();
             this.lblPlayersItems = new System.Windows.Forms.Label();
             this.lblPlayersSkills = new System.Windows.Forms.Label();
             this.lblPlayersClass = new System.Windows.Forms.Label();
-            this.txtPlayersClass = new TextBoxBorderColor.MyTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPlayersClass = new System.Windows.Forms.TextBox();
+            this.txtPlayersSkills = new System.Windows.Forms.TextBox();
+            this.txtPlayersItems = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,69 +74,28 @@
             this.tableLayoutPanel1.Controls.Add(this.lblPlayersItems, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblPlayersSkills, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblPlayersClass, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPlayersClass, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(241, 354);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // txtPlayersItems
-            // 
-            this.txtPlayersItems.AllowDrop = true;
-            this.txtPlayersItems.BorderColor = System.Drawing.Color.Blue;
-            this.txtPlayersItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlayersItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPlayersItems.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtPlayersItems.Location = new System.Drawing.Point(74, 211);
-            this.txtPlayersItems.Multiline = true;
-            this.txtPlayersItems.Name = "txtPlayersItems";
-            this.txtPlayersItems.ReadOnly = true;
-            this.txtPlayersItems.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPlayersItems.Size = new System.Drawing.Size(164, 140);
-            this.txtPlayersItems.TabIndex = 12;
-            this.txtPlayersItems.Text = "Knife, bow, armor";
-            this.txtPlayersItems.DoubleClick += new System.EventHandler(this.TxtPlayersItems_DoubleClick);
-            this.txtPlayersItems.MouseLeave += new System.EventHandler(this.TxtPlayersItems_MouseLeave);
-            // 
-            // txtPlayersSkills
-            // 
-            this.txtPlayersSkills.AllowDrop = true;
-            this.txtPlayersSkills.BorderColor = System.Drawing.Color.Blue;
-            this.txtPlayersSkills.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlayersSkills.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPlayersSkills.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtPlayersSkills.Location = new System.Drawing.Point(74, 81);
-            this.txtPlayersSkills.Multiline = true;
-            this.txtPlayersSkills.Name = "txtPlayersSkills";
-            this.txtPlayersSkills.ReadOnly = true;
-            this.txtPlayersSkills.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPlayersSkills.Size = new System.Drawing.Size(164, 124);
-            this.txtPlayersSkills.TabIndex = 11;
-            this.txtPlayersSkills.Text = "Pickpocketing, backstab";
-            this.txtPlayersSkills.DoubleClick += new System.EventHandler(this.TxtPlayersSkills_DoubleClick);
-            this.txtPlayersSkills.MouseLeave += new System.EventHandler(this.TxtPlayersSkills_MouseLeave);
-            // 
             // lblPlayersItems
             // 
-            this.lblPlayersItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPlayersItems.AutoSize = true;
             this.lblPlayersItems.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblPlayersItems.Location = new System.Drawing.Point(3, 208);
+            this.lblPlayersItems.Location = new System.Drawing.Point(3, 219);
             this.lblPlayersItems.Name = "lblPlayersItems";
             this.lblPlayersItems.Size = new System.Drawing.Size(65, 25);
             this.lblPlayersItems.TabIndex = 9;
-            this.lblPlayersItems.Text = "Skills:";
+            this.lblPlayersItems.Text = "Items:";
             // 
             // lblPlayersSkills
             // 
@@ -144,7 +103,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPlayersSkills.AutoSize = true;
             this.lblPlayersSkills.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblPlayersSkills.Location = new System.Drawing.Point(3, 78);
+            this.lblPlayersSkills.Location = new System.Drawing.Point(3, 131);
             this.lblPlayersSkills.Name = "lblPlayersSkills";
             this.lblPlayersSkills.Size = new System.Drawing.Size(65, 25);
             this.lblPlayersSkills.TabIndex = 8;
@@ -162,24 +121,6 @@
             this.lblPlayersClass.TabIndex = 7;
             this.lblPlayersClass.Text = "Class:";
             // 
-            // txtPlayersClass
-            // 
-            this.txtPlayersClass.AllowDrop = true;
-            this.txtPlayersClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPlayersClass.BorderColor = System.Drawing.Color.Blue;
-            this.txtPlayersClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlayersClass.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtPlayersClass.Location = new System.Drawing.Point(74, 46);
-            this.txtPlayersClass.Multiline = true;
-            this.txtPlayersClass.Name = "txtPlayersClass";
-            this.txtPlayersClass.ReadOnly = true;
-            this.txtPlayersClass.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPlayersClass.Size = new System.Drawing.Size(164, 29);
-            this.txtPlayersClass.TabIndex = 10;
-            this.txtPlayersClass.Text = "Thief";
-            this.txtPlayersClass.DoubleClick += new System.EventHandler(this.TxtPlayersClass_DoubleClick);
-            this.txtPlayersClass.MouseLeave += new System.EventHandler(this.TxtPlayersClass_MouseLeave);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -192,6 +133,48 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Chronos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPlayersClass
+            // 
+            this.txtPlayersClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPlayersClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlayersClass.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPlayersClass.Location = new System.Drawing.Point(74, 46);
+            this.txtPlayersClass.Multiline = true;
+            this.txtPlayersClass.Name = "txtPlayersClass";
+            this.txtPlayersClass.ReadOnly = true;
+            this.txtPlayersClass.Size = new System.Drawing.Size(164, 82);
+            this.txtPlayersClass.TabIndex = 14;
+            this.txtPlayersClass.Text = "Thief";
+            // 
+            // txtPlayersSkills
+            // 
+            this.txtPlayersSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPlayersSkills.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlayersSkills.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPlayersSkills.Location = new System.Drawing.Point(74, 134);
+            this.txtPlayersSkills.Multiline = true;
+            this.txtPlayersSkills.Name = "txtPlayersSkills";
+            this.txtPlayersSkills.ReadOnly = true;
+            this.txtPlayersSkills.Size = new System.Drawing.Size(164, 82);
+            this.txtPlayersSkills.TabIndex = 15;
+            this.txtPlayersSkills.Text = "Pickpocketing";
+            // 
+            // txtPlayersItems
+            // 
+            this.txtPlayersItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPlayersItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlayersItems.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPlayersItems.Location = new System.Drawing.Point(74, 222);
+            this.txtPlayersItems.Multiline = true;
+            this.txtPlayersItems.Name = "txtPlayersItems";
+            this.txtPlayersItems.ReadOnly = true;
+            this.txtPlayersItems.Size = new System.Drawing.Size(164, 129);
+            this.txtPlayersItems.TabIndex = 16;
+            this.txtPlayersItems.Text = "Knife";
             // 
             // PlayerStats
             // 
@@ -217,9 +200,9 @@
         private System.Windows.Forms.Label lblPlayersClass;
         private System.Windows.Forms.Label lblPlayersItems;
         private System.Windows.Forms.Label lblPlayersSkills;
-        private TextBoxBorderColor.MyTextBox txtPlayersClass;
-        private TextBoxBorderColor.MyTextBox txtPlayersSkills;
-        private TextBoxBorderColor.MyTextBox txtPlayersItems;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPlayersClass;
+        private System.Windows.Forms.TextBox txtPlayersItems;
+        private System.Windows.Forms.TextBox txtPlayersSkills;
     }
 }
