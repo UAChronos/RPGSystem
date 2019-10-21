@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="Services\GameDataService.cs" />
     <EmbeddedResource Include="ConsumablesConfigurator.resx">
       <DependentUpon>ConsumablesConfigurator.cs</DependentUpon>

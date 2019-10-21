@@ -19,9 +19,9 @@ namespace RPGSystem
 
         private void BtnThrewADice_Click(object sender, EventArgs e)
         {
-            Random threwReuslt = new Random();
-            lblThrowResult.Text = $"{threwReuslt.Next(1, 6)}";
-            lblThrowResult.Font = new Font("Monotype Corsiva", 100F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204))); ;
+            RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+            lblThrowResult.Text = $"{randomNumberGenerator.NumberGenerator(1,6)}";
+            lblThrowResult.Font = new Font("Monotype Corsiva", 100F, (FontStyle.Bold | FontStyle.Italic), GraphicsUnit.Point, 204); ;
         }
     }
 }
