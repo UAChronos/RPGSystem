@@ -11,6 +11,9 @@ using RPGSystem.Models;
 
 namespace RPGSystem
 {
+    /// <summary>
+    /// Class for PlayerStats user control.
+    /// </summary>
     public partial class PlayerStats : UserControl
     {
         public PlayerStats()

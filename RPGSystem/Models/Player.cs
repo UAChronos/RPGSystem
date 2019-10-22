@@ -8,6 +8,9 @@ namespace RPGSystem.Models
 {
     public class Player
     {
+        /// <summary>
+        /// Property that returns player's name.
+        /// </summary>
         public string Name { get; set; }
 
     }

@@ -17,9 +17,9 @@ namespace RPGSystem
             InitializeComponent();
         }
 
+        private RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         private void BtnThrewADice_Click(object sender, EventArgs e)
         {
-            RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
             lblThrowResult.Text = $"{randomNumberGenerator.NumberGenerator(1,6)}";
             lblThrowResult.Font = new Font("Monotype Corsiva", 100F, (FontStyle.Bold | FontStyle.Italic), GraphicsUnit.Point, 204); ;
         }

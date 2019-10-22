@@ -12,6 +12,9 @@ namespace RPGSystem.Services
         private static readonly object SyncRoot = new object();
         private static GameDataService _instance;
 
+        /// <summary>
+        /// Property that returnes instance of GameDataService.
+        /// </summary>
         public static GameDataService Instance
         {
             get
@@ -31,6 +34,9 @@ namespace RPGSystem.Services
             }
         }
 
+        /// <summary>
+        /// Property that returns reference to the current game model.
+        /// </summary>
         public GameModel GameModel { get; } = new GameModel();
     }
 }

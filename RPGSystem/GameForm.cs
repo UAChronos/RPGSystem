@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace RPGSystem
 {
+    /// <summary>
+    /// Class for GameForm form.
+    /// </summary>
     public partial class GameForm : Form
     {
         public GameForm()
@@ -18,13 +21,24 @@ namespace RPGSystem
             InitializeComponent();
         }
 
-        
+        /// <summary>
+        /// Event handler that executes when user clicks on Add Player tool strip menu item. 
+        /// </summary>
+        ///<para>Add player on game board.</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PlayerStats playerStats = new PlayerStats();
             flowLayoutPanel1.Controls.Add(playerStats);
         }
 
+        /// <summary>
+        /// Event handler that executes when user clicks on Dice Tool strip menu item.
+        ///<para>Shows dice tool.</para>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DiceTool diceTool = new DiceTool();
