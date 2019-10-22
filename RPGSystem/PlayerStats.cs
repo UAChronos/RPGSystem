@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RPGSystem.Models;
 
 namespace RPGSystem
 {
-    public partial class Form1 : Form
+    /// <summary>
+    /// Class for PlayerStats user control.
+    /// </summary>
+    public partial class PlayerStats : UserControl
     {
-        public Form1()
+        public PlayerStats()
         {
             InitializeComponent();
+        }
+
+        public PlayerStats(Player player) : this()
+        {
+
         }
     }
 }
