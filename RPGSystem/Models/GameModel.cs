@@ -13,12 +13,31 @@ namespace RPGSystem.Models
         /// </summary>
         public int Gold { get; set; }
         /// <summary>
-        /// Property that returns ammount crafting pieces.
+        /// Property that returns ammount of crafting pieces.
         /// </summary>
         public int CraftingPieces { get; set; }
         /// <summary>
         /// Property that returns list of players.
         /// </summary>
         public List<Player> Players { get; } = new List<Player>();
+
+        /// <summary>
+        /// Creates a new player with defaults
+        /// </summary>
+        /// <returns>Newly created player</returns>
+        public Player CreateNewPlayer()
+        {
+            var player = new Player()
+            {
+                Name = $"Player{Players.Count + 1}",
+                Class = "No Class",
+                Items = "No Items",
+                Skills = "No Skills"
+            };
+
+            Players.Add(player);
+
+            return player;
+        }
     }
 }

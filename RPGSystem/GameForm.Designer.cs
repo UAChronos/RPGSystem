@@ -165,10 +165,10 @@
             // 
             this.lblCraftingPieces.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCraftingPieces.AutoSize = true;
-            this.lblCraftingPieces.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCraftingPieces.Location = new System.Drawing.Point(3, 5);
+            this.lblCraftingPieces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCraftingPieces.Location = new System.Drawing.Point(3, 4);
             this.lblCraftingPieces.Name = "lblCraftingPieces";
-            this.lblCraftingPieces.Size = new System.Drawing.Size(112, 18);
+            this.lblCraftingPieces.Size = new System.Drawing.Size(136, 20);
             this.lblCraftingPieces.TabIndex = 28;
             this.lblCraftingPieces.Text = "Crafting Pieces:";
             // 
@@ -176,10 +176,10 @@
             // 
             this.lblAmmountOfCraftingPieces.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAmmountOfCraftingPieces.AutoSize = true;
-            this.lblAmmountOfCraftingPieces.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAmmountOfCraftingPieces.Location = new System.Drawing.Point(121, 5);
+            this.lblAmmountOfCraftingPieces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAmmountOfCraftingPieces.Location = new System.Drawing.Point(145, 4);
             this.lblAmmountOfCraftingPieces.Name = "lblAmmountOfCraftingPieces";
-            this.lblAmmountOfCraftingPieces.Size = new System.Drawing.Size(16, 18);
+            this.lblAmmountOfCraftingPieces.Size = new System.Drawing.Size(19, 20);
             this.lblAmmountOfCraftingPieces.TabIndex = 32;
             this.lblAmmountOfCraftingPieces.Text = "0";
             // 
@@ -187,10 +187,10 @@
             // 
             this.lblGold.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblGold.AutoSize = true;
-            this.lblGold.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGold.Location = new System.Drawing.Point(143, 5);
+            this.lblGold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGold.Location = new System.Drawing.Point(170, 4);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(45, 18);
+            this.lblGold.Size = new System.Drawing.Size(52, 20);
             this.lblGold.TabIndex = 29;
             this.lblGold.Text = "Gold:";
             // 
@@ -198,10 +198,10 @@
             // 
             this.lblAmmountOfGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAmmountOfGold.AutoSize = true;
-            this.lblAmmountOfGold.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAmmountOfGold.Location = new System.Drawing.Point(194, 5);
+            this.lblAmmountOfGold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAmmountOfGold.Location = new System.Drawing.Point(228, 4);
             this.lblAmmountOfGold.Name = "lblAmmountOfGold";
-            this.lblAmmountOfGold.Size = new System.Drawing.Size(16, 18);
+            this.lblAmmountOfGold.Size = new System.Drawing.Size(19, 20);
             this.lblAmmountOfGold.TabIndex = 33;
             this.lblAmmountOfGold.Text = "0";
             // 
@@ -209,7 +209,7 @@
             // 
             this.btnChangeAmmountOfGoldAndCraftingPieces.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChangeAmmountOfGoldAndCraftingPieces.AutoSize = true;
-            this.btnChangeAmmountOfGoldAndCraftingPieces.Location = new System.Drawing.Point(216, 3);
+            this.btnChangeAmmountOfGoldAndCraftingPieces.Location = new System.Drawing.Point(253, 3);
             this.btnChangeAmmountOfGoldAndCraftingPieces.Name = "btnChangeAmmountOfGoldAndCraftingPieces";
             this.btnChangeAmmountOfGoldAndCraftingPieces.Size = new System.Drawing.Size(31, 23);
             this.btnChangeAmmountOfGoldAndCraftingPieces.TabIndex = 31;

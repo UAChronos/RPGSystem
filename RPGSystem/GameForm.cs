@@ -1,4 +1,5 @@
-﻿using RPGSystem.Services;
+﻿using RPGSystem.Models;
+using RPGSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,7 @@ namespace RPGSystem
         /// <param name="e"></param>
         private void AddPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PlayerStats playerStats = new PlayerStats();
+            PlayerStats playerStats = new PlayerStats(GameDataService.Instance.GameModel.CreateNewPlayer());
             flowLayoutPanel1.Controls.Add(playerStats);
         }
 
