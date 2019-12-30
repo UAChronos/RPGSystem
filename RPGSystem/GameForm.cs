@@ -22,6 +22,7 @@ namespace RPGSystem
             InitializeComponent();
         }
 
+        public Player Player { get; private set; }
         /// <summary>
         /// Event handler that executes when user clicks on Add Player tool strip menu item. 
         /// </summary>
@@ -31,6 +32,10 @@ namespace RPGSystem
         private void AddPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PlayerStats playerStats = new PlayerStats(GameDataService.Instance.GameModel.CreateNewPlayer());
+            using (PlayerEditor playerEditor = new PlayerEditor(playerStats.Player))
+            {
+                playerEditor.ShowDialog();
+            }
             flowLayoutPanel1.Controls.Add(playerStats);
         }
 
