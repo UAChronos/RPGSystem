@@ -1,9 +1,11 @@
 ﻿using RPGSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace RPGSystem.Services
 {
@@ -37,6 +39,32 @@ namespace RPGSystem.Services
         /// <summary>
         /// Property that returns reference to the current game model.
         /// </summary>
-        public GameModel GameModel { get; } = new GameModel();
+        public GameModel GameModel { get; private set; } = new GameModel();
+
+        /// <summary>
+        /// Method that saves current game data to xml file.
+        /// </summary>
+        /// <param name="fileName">Location in which file will be saved.</param>
+        public void SaveToXml(string fileName)
+        {
+            using (var fileStream = File.OpenWrite(fileName))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(GameModel));
+                xmlSerializer.Serialize(fileStream, GameModel);
+            }
+        }
+
+        /// <summary>
+        /// Method that opens and loads game data storaged as xml file.
+        /// </summary>
+        /// <param name="pathToTheFile">Location where file storaged.</param>
+        public void LoadFromXml(string pathToTheFile)
+        {
+            using (var fileStream = File.OpenRead(pathToTheFile))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(GameModel));
+                GameModel = (GameModel)xmlSerializer.Deserialize(fileStream);
+            }
+        }
     }
 }

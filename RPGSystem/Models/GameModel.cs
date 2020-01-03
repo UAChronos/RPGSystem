@@ -19,7 +19,7 @@ namespace RPGSystem.Models
         /// <summary>
         /// Property that returns list of players.
         /// </summary>
-        public List<Player> Players { get; } = new List<Player>();
+        public List<Player> Players { get; internal set;} = new List<Player>();
 
         /// <summary>
         /// Creates a new player with defaults
