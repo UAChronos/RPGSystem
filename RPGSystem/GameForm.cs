@@ -1,16 +1,10 @@
 ﻿using RPGSystem.Models;
 using RPGSystem.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
 namespace RPGSystem
 {
@@ -82,7 +76,7 @@ namespace RPGSystem
             }
         }
 
-        protected void SaveAs()
+        private void SaveAs()
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
@@ -105,7 +99,7 @@ namespace RPGSystem
             }
         }
 
-        protected void Save()
+        private void Save()
         {
             if (fileExtension == ".xml")
             {
@@ -117,8 +111,8 @@ namespace RPGSystem
             }
         }
 
-        protected string filePath;
-        protected string fileExtension;
+        private string filePath;
+        private string fileExtension;
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(filePath))
