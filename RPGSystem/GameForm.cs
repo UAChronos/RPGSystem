@@ -79,58 +79,82 @@ namespace RPGSystem
             {
                 flowLayoutPanel1.Controls.Clear();
                 flowLayoutPanel1.Controls.AddRange(GameDataService.Instance.GameModel.Players.Select(p => new PlayerStats(p)).ToArray());
-
-                //foreach (Player p in GameDataService.Instance.GameModel.Players)
-                //{
-                //    PlayerStats playerStats = new PlayerStats(p);
-                //    flowLayoutPanel1.Controls.Add(playerStats);
-                //}
             }
         }
 
-        protected string filePath; 
+        protected void SaveAs()
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "DTB files(*.xml;*.json)|*.xml;*.json;|All files (*.*)|*.*";
+                saveFileDialog.FilterIndex = 1;
+                DialogResult result = saveFileDialog.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    string fileName = saveFileDialog.FileName;
+                    fileExtension = Path.GetExtension(fileName);
+                    if (fileExtension == ".xml")
+                    {
+                        GameDataService.Instance.SaveToXml(fileName);
+                    }
+                    else
+                    {
+                        GameDataService.Instance.SaveToJson(fileName);
+                    }
+                }
+            }
+        }
+
+        protected void Save()
+        {
+            if (fileExtension == ".xml")
+            {
+                GameDataService.Instance.SaveToXml(filePath);
+            }
+            else
+            {
+                GameDataService.Instance.SaveToJson(filePath);
+            }
+        }
+
+        protected string filePath;
+        protected string fileExtension;
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(filePath))
             {
-                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-                {
-                    DialogResult result = saveFileDialog.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        string fileName = saveFileDialog.FileName;
-                        GameDataService.Instance.SaveToXml(fileName);
-                    }
-                }
+                SaveAs();
             }
             else
             {
-                GameDataService.Instance.SaveToXml(filePath);
+                Save();
             }
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            {
-                DialogResult result = saveFileDialog.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    string fileName = saveFileDialog.FileName;
-                    GameDataService.Instance.SaveToXml(fileName);
-                }
-            }
+            SaveAs();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Filter = "DTB files(*.xml;*.json)|*.xml;*.json;|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
                 DialogResult result = openFileDialog.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     string fileName = openFileDialog.FileName;
-                    GameDataService.Instance.LoadFromXml(fileName);
+                    fileExtension = Path.GetExtension(fileName);
+                    if (fileExtension == ".xml")
+                    {
+                        GameDataService.Instance.LoadFromXml(fileName);
+                    }
+                    else
+                    {
+                        GameDataService.Instance.LoadFromJson(fileName);
+                    }
                     UpdateUI(true);
                     filePath = fileName;
                 }

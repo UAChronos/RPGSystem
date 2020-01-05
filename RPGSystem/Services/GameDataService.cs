@@ -1,4 +1,5 @@
-﻿using RPGSystem.Models;
+﻿using Newtonsoft.Json;
+using RPGSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,11 +22,11 @@ namespace RPGSystem.Services
         {
             get
             {
-                if(_instance == null)
+                if (_instance == null)
                 {
                     lock (SyncRoot)
                     {
-                        if(_instance == null)
+                        if (_instance == null)
                         {
                             _instance = new GameDataService();
                         }
@@ -57,13 +58,39 @@ namespace RPGSystem.Services
         /// <summary>
         /// Method that opens and loads game data storaged as xml file.
         /// </summary>
-        /// <param name="pathToTheFile">Location where file storaged.</param>
-        public void LoadFromXml(string pathToTheFile)
+        /// <param name="filePath">Location where file storaged.</param>
+        public void LoadFromXml(string filePath)
         {
-            using (var fileStream = File.OpenRead(pathToTheFile))
+            using (var fileStream = File.OpenRead(filePath))
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(GameModel));
                 GameModel = (GameModel)xmlSerializer.Deserialize(fileStream);
+            }
+        }
+
+        /// <summary>
+        /// Method that saves current game data to json file.
+        /// </summary>
+        /// <param name="fileName">Location in which file will be saved.</param>
+        public void SaveToJson(string fileName)
+        {
+            using (StreamWriter streamWriter = File.CreateText(fileName))
+            {
+                JsonSerializer jsonSerializer = new JsonSerializer();
+                jsonSerializer.Serialize(streamWriter, GameModel);
+            }
+        }
+
+        /// <summary>
+        /// Method that opens and loads game data storaged as json file.
+        /// </summary>
+        /// <param name="filePath">Location where file storaged.</param>
+        public void LoadFromJson(string filePath)
+        {
+            using (StreamReader streamReader = File.OpenText(filePath))
+            {
+                JsonSerializer jsonSerializer = new JsonSerializer();
+                GameModel = JsonConvert.DeserializeObject<GameModel>(filePath);
             }
         }
     }
