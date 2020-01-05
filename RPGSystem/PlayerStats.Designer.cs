@@ -39,9 +39,9 @@
             this.lblPlayersSkills = new System.Windows.Forms.Label();
             this.lblPlayersClass = new System.Windows.Forms.Label();
             this.lblPlayersName = new System.Windows.Forms.Label();
-            this.txtPlayersClass = new System.Windows.Forms.TextBox();
-            this.txtPlayersSkills = new System.Windows.Forms.TextBox();
             this.btnEditPlayer = new System.Windows.Forms.Button();
+            this.txtPlayersSkills = new System.Windows.Forms.TextBox();
+            this.txtPlayersClass = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -155,20 +155,18 @@
             this.lblPlayersName.Text = "Chronos";
             this.lblPlayersName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtPlayersClass
+            // btnEditPlayer
             // 
-            this.txtPlayersClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnEditPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPlayersClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.txtPlayersClass, 2);
-            this.txtPlayersClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPlayersClass.Location = new System.Drawing.Point(87, 42);
-            this.txtPlayersClass.Multiline = true;
-            this.txtPlayersClass.Name = "txtPlayersClass";
-            this.txtPlayersClass.ReadOnly = true;
-            this.txtPlayersClass.Size = new System.Drawing.Size(261, 82);
-            this.txtPlayersClass.TabIndex = 14;
-            this.txtPlayersClass.Text = "Thief";
+            this.btnEditPlayer.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPlayer.Image")));
+            this.btnEditPlayer.Location = new System.Drawing.Point(319, 3);
+            this.btnEditPlayer.Name = "btnEditPlayer";
+            this.btnEditPlayer.Size = new System.Drawing.Size(29, 33);
+            this.btnEditPlayer.TabIndex = 17;
+            this.btnEditPlayer.UseVisualStyleBackColor = true;
+            this.btnEditPlayer.Click += new System.EventHandler(this.btnEditPlayer_Click);
             // 
             // txtPlayersSkills
             // 
@@ -185,18 +183,20 @@
             this.txtPlayersSkills.TabIndex = 15;
             this.txtPlayersSkills.Text = "Pickpocketing";
             // 
-            // btnEditPlayer
+            // txtPlayersClass
             // 
-            this.btnEditPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPlayersClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditPlayer.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPlayer.Image")));
-            this.btnEditPlayer.Location = new System.Drawing.Point(319, 3);
-            this.btnEditPlayer.Name = "btnEditPlayer";
-            this.btnEditPlayer.Size = new System.Drawing.Size(29, 33);
-            this.btnEditPlayer.TabIndex = 17;
-            this.btnEditPlayer.UseVisualStyleBackColor = true;
-            this.btnEditPlayer.Click += new System.EventHandler(this.btnEditPlayer_Click);
+            this.txtPlayersClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtPlayersClass, 2);
+            this.txtPlayersClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPlayersClass.Location = new System.Drawing.Point(87, 42);
+            this.txtPlayersClass.Multiline = true;
+            this.txtPlayersClass.Name = "txtPlayersClass";
+            this.txtPlayersClass.ReadOnly = true;
+            this.txtPlayersClass.Size = new System.Drawing.Size(261, 82);
+            this.txtPlayersClass.TabIndex = 14;
+            this.txtPlayersClass.Text = "Thief";
             // 
             // PlayerStats
             // 

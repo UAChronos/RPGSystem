@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace RPGSystem.Models
 {
@@ -19,7 +15,7 @@ namespace RPGSystem.Models
         /// <summary>
         /// Property that returns list of players.
         /// </summary>
-        public List<Player> Players { get; } = new List<Player>();
+        public List<Player> Players { get; internal set;} = new List<Player>();
 
         /// <summary>
         /// Creates a new player with defaults
